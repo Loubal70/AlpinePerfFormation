@@ -1,0 +1,47 @@
+<div x-data="lightbox()"
+     x-show="isOpen" 
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition ease-in duration-200"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     class="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+     @click.self="close()"
+     @open-lightbox.window="open($event.detail.image)"
+     x-cloak>
+    
+    <button @click="close()" 
+            class="absolute top-4 right-4 z-60 text-white hover:text-gray-300 transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <div class="relative max-w-7xl max-h-full mx-4 flex flex-col items-center">
+        
+        <div x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             class="relative">
+            
+            <img :src="getImageSrc()"
+                 :alt="getImageAlt()" 
+                 class="max-w-full max-h-[80vh] object-contain">
+        </div>
+
+        <div x-show="getImageTitle() || getImageDescription()" 
+             class="mt-4 text-center text-white max-w-2xl">
+            
+            <h3 x-show="getImageTitle()" 
+                x-text="getImageTitle()" 
+                class="text-xl font-semibold mb-2"></h3>
+            
+            <p x-show="getImageDescription()" 
+               x-text="getImageDescription()" 
+               class="text-gray-300"></p>
+        </div>
+
+
+    </div>
+</div> 

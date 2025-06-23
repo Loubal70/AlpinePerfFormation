@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Découvrez nos nouveautés",
+        "description": "Une collection unique de produits innovants pour révolutionner votre quotidien",
+        "image": "https://cdn.pixabay.com/photo/2020/03/11/01/01/landcapes-4920648_1280.jpg"
+    },
+    {
+        "title": "Excellence et qualité",
+        "description": "Des matériaux premium sélectionnés avec soin pour une expérience exceptionnelle",
+        "image": "https://cdn.pixabay.com/photo/2020/06/15/12/43/landcape-5301769_1280.jpg"
+    },
+    {
+        "title": "Innovation technologique",
+        "description": "Les dernières avancées au service de vos besoins et de votre confort",
+        "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=1200&h=600&fit=crop"
+    },
+    {
+        "title": "Design moderne",
+        "description": "Un style contemporain qui s'adapte parfaitement à votre environnement",
+        "image": "https://cdn.pixabay.com/photo/2019/03/27/06/12/mountains-4084331_1280.jpg"
+    }
+] 
